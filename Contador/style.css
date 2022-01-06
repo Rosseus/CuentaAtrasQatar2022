@@ -1,0 +1,70 @@
+@media only screen and (min-width: 200px) and (max-width: 800px){
+	body{
+		background: fixed url('https://i.pinimg.com/originals/6f/71/4f/6f714f9e9b3eab30ccec71f3b888ca28.png');
+		width: 100%;
+		height: 25%;
+		display: block;
+	}
+	.imagen{
+		height: 100px;
+	}
+
+
+	}
+
+body{
+		background:fixed url('https://i.pinimg.com/originals/6f/71/4f/6f714f9e9b3eab30ccec71f3b888ca28.png');
+}
+
+
+.imagen{
+		margin-top: 170px;
+		display: flex;
+		justify-content: center;
+		
+
+}
+img{
+	width: 300px;
+	height: 300px;
+}
+
+.contenedor{
+	display: flex;
+
+}
+
+.dias,.minutos,.horas,.segundos {
+	flex:  1 1 auto;
+	width: auto;
+	height: auto;
+	font-size: 20px;
+	margin-top: 15%;
+	margin-left: 1%;
+	font-family: Lemonada;
+	flex-direction: row;
+	color: #56042C;
+	background-color: white;
+	border-style:outset inset solid ;
+	border-radius: 10px;
+	text-align: center;
+	box-shadow:inset 0 -10px 20px #FEC310;
+	text-shadow: 1px 1px 2px black;
+	align-items: center;
+}
+
+h1{
+	font-size: 40px;
+}
+
+p{
+	font-size: 20px;
+}
+h1,p{
+	color: white;
+	font-family: Lemonada;
+	margin: auto 0;
+	text-align: center;
+		text-shadow: 1px 5px 2px black
+
+}

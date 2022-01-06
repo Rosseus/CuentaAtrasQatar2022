@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lemonada&display=swap" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contador para Qatar 2022</title>
+	<style type="text/css">@media only screen and (min-width: 200px) and (max-width: 800px){
+	body{
+		background: url('https://i.pinimg.com/originals/6f/71/4f/6f714f9e9b3eab30ccec71f3b888ca28.png');
+		width: 95%;
+		display: block;
+
+	}
+	
+	}
+
+body{
+	background-color: #56042C;
+}
+
+
+.imagen{
+		display: flex;
+		justify-content: center;
+		margin-top: 60px;
+
+}
+img{
+	width: 300px;
+	height: 300px;
+}
+
+.contenedor{
+	display: flex;
+
+}
+
+.dias,.minutos,.horas,.segundos {
+	flex:  1 1 auto;
+	width: auto;
+	height: auto;
+	font-size: 20px;
+	margin-top: 20%;
+	margin-left: 1%;
+	font-family: Lemonada;
+	flex-direction: row;
+	color: #56042C;
+	background-color: white;
+	border-style:outset inset solid ;
+	border-radius: 10px;
+	text-align: center;
+	box-shadow:inset 0 -10px 20px #FEC310;
+	text-shadow: 1px 1px 2px black;
+	align-items: center;
+}
+
+h1{
+	font-size: 40px;
+}
+
+p{
+	font-size: 20px;
+}
+h1,p{
+	color: white;
+	font-family: Lemonada;
+	margin: auto 0;
+	text-align: center;
+		text-shadow: 1px 5px 2px black
+
+}</style>
+</head>
+<body>
+
+	<div><h1>Este es el año del mundial Qatar 2022</h1>
+	<p>Comienza el 21 de Noviembre! Apoya a tu país!</p></div>
+
+	<div class="imagen"><img src="https://1.bp.blogspot.com/-bhFspCRRWl4/XXMtGjNhwWI/AAAAAAABV20/JrN1XarxGoIPcw0_lywr_tc6qIKDtP-wACLcBGAs/s320/Qatar2022.png"></div>
+	<div class="contenedor"></div>
+
+
+<script type="text/javascript">// Creación de Div's
+let contenedor = document.querySelector('.contenedor');
+let m = document.createElement('div');
+let d = document.createElement('div');
+let h = document.createElement('div');
+let min = document.createElement('div');
+let s = document.createElement('div');
+contenedor.appendChild(m).className = 'meses';
+contenedor.appendChild(d).className = 'dias';
+contenedor.appendChild(h).className = 'horas';
+contenedor.appendChild(min).className = 'minutos';
+contenedor.appendChild(s).className = 'segundos';
+let dias = document.querySelector('.dias');
+let horas = document.querySelector('.horas');
+let minutos = document.querySelector('.minutos');
+let segundos = document.querySelector('.segundos');
+//
+
+
+function tiempoRestante (){
+	const da = new Date()
+let fecha = new Date("November 21, 2022 00:00:00");
+let fechaMs = fecha.getTime();
+let horaActual = Date.now();
+const f = fechaMs - horaActual;
+const unDia = 24 * 60 * 60 * 1000;
+const unaHora = 60 * 60 * 1000;
+const unMinuto = 60 * 1000;
+let diaAhora = da.getDay();
+let diaFecha = fecha.getDay();
+let diasRestante = f / unDia ;
+diasRestante = Math.floor(diasRestante);
+let horaRestante = Math.floor((f % unDia) / unaHora);
+let minutosRestante = Math.floor((f % unaHora) / unMinuto);
+let segundosRestante = Math.floor((f % unMinuto) / 1000);
+
+
+	dias.innerHTML = 'Días: ' + diasRestante
+	segundos.innerHTML = 'Segundos: ' + segundosRestante
+	horas.innerHTML ='Horas: ' + horaRestante
+	minutos.innerHTML = 'Minutos: ' + minutosRestante
+}
+
+
+
+setInterval(tiempoRestante,500);
+tiempoRestante(); </script>
+</body>
+</html>
